@@ -1,0 +1,99 @@
+﻿<Window x:Class="Login2.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login2"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="750" Width="1300" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="1300" Background="#FFFF7EE2"/>
+        <Grid HorizontalAlignment="Left" Height="712" Margin="0,28,0,0" VerticalAlignment="Top" Width="100" Background="#FF858585"/>
+        <TabControl HorizontalAlignment="Left" Height="707" Margin="105,33,0,0" VerticalAlignment="Top" Width="1185">
+            <TabItem Header="Employee">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="ID" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Name" HorizontalAlignment="Left" Margin="0,39,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Phone" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Address" HorizontalAlignment="Left" Margin="0,96,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Place Birth" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Birth Date" HorizontalAlignment="Left" Margin="0,185,0,0" VerticalAlignment="Top"/>
+                    <Label Content="NIK" HorizontalAlignment="Left" Margin="0,209,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Email" HorizontalAlignment="Left" Margin="0,233,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="NPWP" HorizontalAlignment="Left" Margin="0,257,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="69,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="University" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="361,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Degree" HorizontalAlignment="Left" Margin="277,40,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="361,34,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Major" HorizontalAlignment="Left" Margin="277,67,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="361,63,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Region" HorizontalAlignment="Left" Margin="0,158,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="69,154,0,0" VerticalAlignment="Top" Width="151"/>
+                    <Label Content="Job Title" HorizontalAlignment="Left" Margin="277,96,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="361,92,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Dept" HorizontalAlignment="Left" Margin="277,125,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="361,120,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Religion" HorizontalAlignment="Left" Margin="277,154,0,0" VerticalAlignment="Top"/>
+                    <ComboBox Name="Religion_cb" HorizontalAlignment="Left" Margin="361,148,0,0" VerticalAlignment="Top" Width="165" Loaded="Religion_cb_Loaded"/>
+                    <Label Content="Join Date" HorizontalAlignment="Left" Margin="280,185,0,0" VerticalAlignment="Top"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="69,187,0,0" VerticalAlignment="Top" Width="151"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="361,181,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button Content="Insert" HorizontalAlignment="Left" Margin="361,228,0,0" VerticalAlignment="Top" Width="89"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="List Employee" FontSize="16" Height="27" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid HorizontalAlignment="Left" Height="296" Margin="10,10,0,0" VerticalAlignment="Top" Width="516"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Department" FontSize="16" Height="27" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5" Margin="4,0,1,7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="961*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Data Department" HorizontalAlignment="Left" Height="170" Margin="3,14,0,0" VerticalAlignment="Top" Width="758" Background="#FFF9F9F9" Grid.Column="1" Grid.ColumnSpan="2">
+                        <Grid Background="#FFE1F9D6">
+                            <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="22" Margin="131,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12" IsReadOnly="True" IsEnabled="False"/>
+                            <Label Content="Id" HorizontalAlignment="Left" Margin="3,19,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox x:Name="txtDept" HorizontalAlignment="Left" Height="24" Margin="131,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <Label Content="Nama  Divisi" HorizontalAlignment="Left" Margin="3,59,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Department" HorizontalAlignment="Left" Margin="398,20,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <Label Content="Manager" HorizontalAlignment="Left" Margin="398,60,0,0" VerticalAlignment="Top" FontSize="14" Foreground="#DD000000"/>
+                            <TextBox x:Name="txtManager" HorizontalAlignment="Left" Height="22" Margin="507,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.27,1.391" BorderBrush="#89000000" FontSize="12"/>
+                            <ComboBox x:Name="cmbDivisi" HorizontalAlignment="Left" Margin="509,19,0,0" VerticalAlignment="Top" Width="197" Background="{x:Null}" BorderBrush="#89000000" OpacityMask="Black"  ItemsSource="{Binding Path=getDivision}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="CmbDivisi_SelectionChanged" Loaded="CmbDivisi_Loaded"/>
+                        </Grid>
+                    </GroupBox>
+                    <DataGrid x:Name="dg_Departement" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="256" Margin="1,202,0,0" VerticalAlignment="Top" Width="757" Grid.ColumnSpan="2" Background="#FFE1F9D6" Grid.Column="1" Loaded="Dg_Departement_Loaded" SelectedCellsChanged="Dg_Departement_SelectedCellsChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Department" Binding="{Binding Path=Name_Department}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Manager" Binding="{Binding Path=Manager}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nama Divisi" Binding="{Binding Path=Division}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="INSERT" HorizontalAlignment="Left" Margin="429,482,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="16" Grid.Column="2" BorderBrush="#FFF7FDF8"/>
+                    <Button Content="DELETE" HorizontalAlignment="Left" Margin="660,482,0,0" VerticalAlignment="Top" Width="89" FontWeight="Bold" FontSize="16" Grid.Column="2" BorderBrush="#FFF7FDF8" Background="#FFEA2D2D"/>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="List Department">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+
+</Window>
